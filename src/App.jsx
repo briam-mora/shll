@@ -50,7 +50,7 @@ export function App() {
           {content.panelists.map(panelist => <img key={panelist.id} id={panelist.id} src={panelist.src} />)}
           <img id="light-arrow" src="icono.png" />
           <img id="play-button" src="play.png" />
-          <img id="pantalla-carga" src="pantalla_carga.png" />
+          <img id="pantalla-carga" src="shell_AR.png" />
           <img id="celular" src="celular.png" />
           <img id="celular-flechas" src="celular-flechas.png" />
           <img id="celular-instrucciones" src="celular-instrucciones.png" />
@@ -84,7 +84,7 @@ export function App() {
         <a-sky src="#panorama"></a-sky>
 
 
-        {started && <a-plane
+        {/* {started && <a-plane
           class="clickable"
           src="#date"
           position={`0.04 -0.2 -${DEFAULT_DISTANCE_FROM_USER}`}
@@ -156,7 +156,7 @@ export function App() {
             scale="0.6 0.6 0.6"
             gltf-material-fix="color: #FFF;"
           ></a-entity>
-        </a-entity>}
+        </a-entity>} */}
 
         <a-plane
           class="clickable"
@@ -166,18 +166,20 @@ export function App() {
           scale="0.9 1.6 1"
           material="shader: flat"
           onClick={(e) => {
-            setStarted(true);
+            //setStarted(true);
             var audio = new Audio('musica.wav');
             audio.loop = true; // Enable looping
             audio.play();
-            var voice = new Audio('bienvenida.wav');
+            var voice = new Audio('LOC2.wav');
             voice.play();
+            var button = new Audio('boton.wav');
+            button.play();
             e.target.setAttribute("scale", "0 0 0")
           }}
         ></a-plane>
 
 
-        {!showPanelist && <a-entity
+        {/* {!showPanelist && <a-entity
           position={`-${DEFAULT_DISTANCE_FROM_USER + 0.1} 0.75 0`}
           rotation="0 90 0"
           scale="1 0.75 1"
@@ -222,11 +224,11 @@ export function App() {
           position={`-${DEFAULT_DISTANCE_FROM_USER} 0 0`}
           rotation="0 90 0"
           scale="1 1 1"
-          closeFunction={() => setShowPanelists(false)} />}
+          closeFunction={() => setShowPanelists(false)} />} */}
 
         {/* Video Principal */}
 
-        <VideoGallery
+        {/* <VideoGallery
           videos={[{ src: "#video", autoplay: false }]}
           titleSrc="#video-titulo"
           position={`${DEFAULT_DISTANCE_FROM_USER} 0 0`}
@@ -337,10 +339,10 @@ export function App() {
           position={`0 0 ${DEFAULT_DISTANCE_FROM_USER}`}
           rotation="0 180 0"
           closeFunction={() => setShowCharacteristics(false)}
-        />}
+        />} */}
 
         {/* Ambient Elements */}
-        <a-plane
+        {/* <a-plane
           src="#ambient1"
           transparent="true"
           position="0.5 1 2"
@@ -456,7 +458,7 @@ export function App() {
           scale="0.4 0.4 0.4"
           material="shader: flat"
           animation="property: position; to: -3 -1 -2; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
-        ></a-plane>
+        ></a-plane> */}
       </a-scene>
     </>
   );
