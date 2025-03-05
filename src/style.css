@@ -10,15 +10,15 @@ body,
 }
 
 .a-dialog-allow-button {
-    background-color: #FFD200;
+    background-color: #FFD200 !important;
 }
 
 .a-dialog-deny-button {
-    background-color: #EC1C24;
+    background-color: #EC1C24 !important;
 }
 
 .a-dialog-ok-button {
-    background-color: #FFD200;
+    background-color: #FFD200 !important;
 }
 
 .a-loading-screen {

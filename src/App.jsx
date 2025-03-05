@@ -58,6 +58,7 @@ export function App() {
           <img id="video-titulo" src="shell_AR_logo.png" />
           <img id="panelistas-video-titulo" src="titulo_panelistas_galeria.png" />
           <img id="panelists-button" src="titulo_panelistas.png" />
+          <img id="characteristics-background" src="shell_bg.png" />
           <img id="characteristics-title" src="back-equipo.png" />
           <img id="panelists-text" src="nuevo-small_back_panelista.png" />
           <img id="characteristics-button" src="art_shell-18.png" />
@@ -66,14 +67,14 @@ export function App() {
           <img id="characteristics-2" src="art_shell-20.png" />
           <img id="characteristics-3" src="art_shell-21.png" />
           <img id="characteristics-4" src="art_shell-22.png" />
-          <img id="ambient1" src="palabras_flotantes-32.png" />
-          <img id="ambient2" src="palabras_flotantes-33.png" />
-          <img id="ambient3" src="palabras_flotantes-34.png" />
-          <img id="agil" src="palabras_flotantes-35.png" />
-          <img id="simple" src="palabras_flotantes-36.png" />
-          <img id="impacto" src="palabras_flotantes-37.png" />
-          <img id="evolucion" src="palabras_flotantes-38.png" />
-          <img id="evolucionshell" src="palabras_flotantes-39.png" />
+          <img id="ambient1" src="palabras_flotantes-COLOR-32.png" />
+          <img id="ambient2" src="palabras_flotantes-COLOR-33.png" />
+          <img id="ambient3" src="palabras_flotantes-COLOR-34.png" />
+          <img id="agil" src="palabras_flotantes-COLOR-35.png" />
+          <img id="simple" src="palabras_flotantes-COLOR-36.png" />
+          <img id="impacto" src="palabras_flotantes-COLOR-37.png" />
+          <img id="evolucion" src="palabras_flotantes-COLOR-38.png" />
+          <img id="evolucionshell" src="palabras_flotantes-COLOR-39.png" />
           <img id="next" src="next.png" />
           <img id="prev" src="prev.png" />
           <img id="close" src="close.png" />
@@ -256,11 +257,12 @@ export function App() {
           onClick={openCharacteristics}
           scale-animator="duration: 500; easing: easeInOutCubic"
         >
+          
           <a-plane
             src="#characteristics-title"
             class="clickable"
             position="0 1.35 0"
-            scale="1.3 0.2 1.3"
+            scale="1.3 0.28 0.3"
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
@@ -284,6 +286,15 @@ export function App() {
             material="shader: flat"
             onClick={openCharacteristics}
           ></a-plane>
+          {/*<a-plane
+            src="#characteristics-background"
+            class="clickable"
+            position="0 1 -1"
+            scale="2 3 2"
+            transparent="true"
+            material="shader: flat"
+            onClick={openCharacteristics}
+          ></a-plane>*/}
           <a-plane
             src="#characteristics-2"
             class="clickable"
@@ -394,7 +405,7 @@ export function App() {
           transparent="true"
           position="-2 0.5 -3"
           rotation="0 0 0"
-          scale="0.5 0.25 0.5"
+          scale="0.25 0.247 0.25"
           material="shader: flat"
           animation="property: position; to: -0.5 -1 -1; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
         ></a-plane>
@@ -421,7 +432,7 @@ export function App() {
           transparent="true"
           position="2 1 1"
           rotation="0 -135 0"
-          scale="0.5 0.25 0.5"
+          scale="0.25 0.247 0.25"
           material="shader: flat"
           animation="property: position; to: 1 0.5 1; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
         ></a-plane>
@@ -448,7 +459,7 @@ export function App() {
           transparent="true"
           position="-2 -1 1"
           rotation="0 -225 0"
-          scale="0.5 0.25 0.5"
+          scale="0.25 0.247 0.25"
           material="shader: flat"
           animation="property: position; to: -1 0 1; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
         ></a-plane>
