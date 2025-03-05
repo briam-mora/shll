@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import 'aframe';
 
-const ImageGallery = ({ images, position, rotation, closeFunction }) => {
+const ImageGallery = ({ images, audios, position, rotation, closeFunction }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Handlers for navigation
   const handleNext = () => {
     var audio = new Audio('click.wav');
+    // if (audios) audio = new Audio(audios[currentIndex + 1]);
     audio.play();
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };

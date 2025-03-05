@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import 'aframe';
 
-const VideoGallery = ({ titleSrc, videos, position, rotation, scale, closeFunction }) => {
+const VideoGallery = ({ titleSrc, videos, position, rotation, scale, closeFunction, titleSrcScale = "0.9 0.18 1" }) => {
   const videoRef = useRef(null); // Reference to the video element
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -61,7 +61,7 @@ const VideoGallery = ({ titleSrc, videos, position, rotation, scale, closeFuncti
       <a-plane
         src={titleSrc}
         position="0 0.95 0"
-        scale="0.9 0.18 1"
+        scale={titleSrcScale}
         transparent="true"
         material="shader: flat"
         scale-animator="duration: 500; easing: easeInOutCubic"

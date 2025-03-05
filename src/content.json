@@ -8,10 +8,16 @@
         { "id":"panelista6", "src": "AlbanBarrantes.mp4", "muted": true, "autoPlay": true}
     ],
     "images": [
-        {"id":"image1", "src": "art_fifco-24.png"},
-        {"id":"image2", "src": "art_fifco-25.png"},
-        {"id":"image3", "src": "art_fifco-26.png"},
-        {"id":"image4", "src": "art_fifco-27.png"}
+        {"id":"image1", "src": "art_shell-24.png"},
+        {"id":"image2", "src": "art_shell-25.png"},
+        {"id":"image3", "src": "art_shell-26.png"},
+        {"id":"image4", "src": "art_shell-27.png"}
+    ],
+    "audios": [
+        {"id":"audio1", "src": "LOC4.wav"},
+        {"id":"audio2", "src": "LOC5.wav"},
+        {"id":"audio3", "src": "LOC6.wav"},
+        {"id":"audio4", "src": "LOC8.wav"}
     ],
     "panelists": [
         {"id":"panelist-button-1", "src": "nuevo-small_panelista1.png"},

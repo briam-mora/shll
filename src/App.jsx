@@ -35,6 +35,7 @@ export function App() {
     return () => {
     };
   }, []);
+  
 
   return (
     <>
@@ -54,17 +55,17 @@ export function App() {
           <img id="celular" src="celular.png" />
           <img id="celular-flechas" src="celular-flechas.png" />
           <img id="celular-instrucciones" src="celular-instrucciones.png" />
-          <img id="video-titulo" src="back_prime.png" />
+          <img id="video-titulo" src="shell_AR_logo.png" />
           <img id="panelistas-video-titulo" src="titulo_panelistas_galeria.png" />
           <img id="panelists-button" src="titulo_panelistas.png" />
           <img id="characteristics-title" src="back-equipo.png" />
           <img id="panelists-text" src="nuevo-small_back_panelista.png" />
-          <img id="characteristics-button" src="art_fifco-18.png" />
-          <img id="characteristics-arrow" src="art_fifco-23.png" />
-          <img id="characteristics-1" src="art_fifco-19.png" />
-          <img id="characteristics-2" src="art_fifco-20.png" />
-          <img id="characteristics-3" src="art_fifco-21.png" />
-          <img id="characteristics-4" src="art_fifco-22.png" />
+          <img id="characteristics-button" src="art_shell-18.png" />
+          <img id="characteristics-arrow" src="art_shell-23.png" />
+          <img id="characteristics-1" src="art_shell-19.png" />
+          <img id="characteristics-2" src="art_shell-20.png" />
+          <img id="characteristics-3" src="art_shell-21.png" />
+          <img id="characteristics-4" src="art_shell-22.png" />
           <img id="ambient1" src="palabras_flotantes-32.png" />
           <img id="ambient2" src="palabras_flotantes-33.png" />
           <img id="ambient3" src="palabras_flotantes-34.png" />
@@ -77,7 +78,7 @@ export function App() {
           <img id="prev" src="prev.png" />
           <img id="close" src="close.png" />
           <img id="date" src="date.png" />
-          <video id="video" src="video.mp4" autoPlay={false} loop={false}></video>
+          <video id="video" src="SHELL V Power.mp4" autoPlay={false} loop={false}></video>
           <audio src="bienvenida.wav" preload="auto"></audio>
         </a-assets>
 
@@ -85,7 +86,7 @@ export function App() {
         <a-sky src="#panorama"></a-sky>
 
 
-        {started && <a-plane
+        {/* {started && <a-plane
           class="clickable"
           src="#date"
           position={`0.04 -0.2 -${DEFAULT_DISTANCE_FROM_USER}`}
@@ -94,7 +95,7 @@ export function App() {
           transparent="true"
           material="shader: flat"
           onClick={() => { window.open('https://maps.app.goo.gl/iwQ4uWfBv2cank8i9?g_st=com.google.maps.preview.copy', '_blank'); }}
-        ></a-plane>}
+        ></a-plane>} */}
 
         {started && (
           <a-entity position={`0 -0.45 -${DEFAULT_DISTANCE_FROM_USER - 0.1}`}>
@@ -137,24 +138,17 @@ export function App() {
           scale="1 1 1"
         >
           <a-entity
-            gltf-model="logo_genesis.glb"
-            position="-0.36 -0.17 0"
-            rotation="90 0 0"
-            scale="0.83 0.83 0.83"
-            gltf-material-fix="color: #9AD7E2;"
-          ></a-entity>
-          <a-entity
-            gltf-model="logo_prime.glb"
-            position="0 0.3 0"
+            gltf-model="imags_Shell_trans.glb"
+            position="0 0 0"
             rotation="90 0 0"
             scale="0.5 0.5 0.5"
             gltf-material-fix="color: #FFF;"
           ></a-entity>
           <a-entity
-            gltf-model="logo_team.glb"
-            position="0 0.1 0"
+            gltf-model="Shell-Logo.glb"
+            position="0 0.6 0"
             rotation="90 0 0"
-            scale="0.6 0.6 0.6"
+            scale="0.2 0.2 0.2"
             gltf-material-fix="color: #FFF;"
           ></a-entity>
         </a-entity>}
@@ -167,10 +161,11 @@ export function App() {
           scale="0.9 1.6 1"
           material="shader: flat"
           onClick={(e) => {
-            //setStarted(true);
-            var audio = new Audio('musica.wav');
+            setStarted(true);
+            var audio = new Audio('shell_musica.wav');
             audio.loop = true; // Enable looping
             audio.play();
+            audio.volume = 0.2;
             var voice = new Audio('LOC2.wav');
             voice.play();
             var button = new Audio('boton.wav');
@@ -180,7 +175,22 @@ export function App() {
         ></a-plane>
 
 
-        {!showPanelist && <a-entity
+        <a-entity
+          id="logo-model"
+          hover-animator="duration: 2000; easing: easeInOutQuad;"
+          position={`-${DEFAULT_DISTANCE_FROM_USER + 0.1} 0.75 0`}
+          scale="1 1 1"
+        >
+          <a-entity
+            gltf-model="FerrariMaya.glb"
+            position="0 -1.1 0"
+            scale="0.25 0.25 0.25"
+            gltf-material-fix="color: #FFF;"
+            animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true; autoplay: true"
+          ></a-entity>
+        </a-entity>
+
+        {/* {!showPanelist && <a-entity
           position={`-${DEFAULT_DISTANCE_FROM_USER + 0.1} 0.75 0`}
           rotation="0 90 0"
           scale="1 0.75 1"
@@ -225,13 +235,14 @@ export function App() {
           position={`-${DEFAULT_DISTANCE_FROM_USER} 0 0`}
           rotation="0 90 0"
           scale="1 1 1"
-          closeFunction={() => setShowPanelists(false)} />}
+          closeFunction={() => setShowPanelists(false)} />} */}
 
         {/* Video Principal */}
 
         <VideoGallery
           videos={[{ src: "#video", autoplay: false }]}
           titleSrc="#video-titulo"
+          titleSrcScale = "0.5 0.3 0.5"
           position={`${DEFAULT_DISTANCE_FROM_USER} 0 0`}
           rotation="0 -90 0"
           scale="1 1 1" />
@@ -259,7 +270,7 @@ export function App() {
           <a-plane
             src="#characteristics-1"
             class="clickable"
-            position="-0.4 0.8 0"
+            position="-0.4 0.75 0"
             scale="0.2 0.5 1"
             transparent="true"
             material="shader: flat"
@@ -269,7 +280,7 @@ export function App() {
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
-            position="-0.4 1.06 0.01"
+            position="-0.4 1.10 0.01"
             scale="0.2 0.19 1"
             transparent="true"
             material="shader: flat"
@@ -278,7 +289,7 @@ export function App() {
           <a-plane
             src="#characteristics-2"
             class="clickable"
-            position="-0.1325 0.8 0"
+            position="-0.1325 0.75 0"
             scale="0.2 0.5 1"
             transparent="true"
             material="shader: flat"
@@ -288,7 +299,7 @@ export function App() {
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
-            position="-0.1325 1.06 0.01"
+            position="-0.1325 1.10 0.01"
             scale="0.2 0.19 1"
             transparent="true"
             material="shader: flat"
@@ -297,7 +308,7 @@ export function App() {
           <a-plane
             src="#characteristics-3"
             class="clickable"
-            position="0.1325 0.8 0"
+            position="0.1325 0.75 0"
             scale="0.2 0.5 1"
             transparent="true"
             material="shader: flat"
@@ -307,7 +318,7 @@ export function App() {
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
-            position="0.1325 1.06 0.01"
+            position="0.1325 1.10 0.01"
             scale="0.2 0.19 1"
             transparent="true"
             material="shader: flat"
@@ -316,7 +327,7 @@ export function App() {
           <a-plane
             src="#characteristics-4"
             class="clickable"
-            position="0.4 0.8 0"
+            position="0.4 0.75 0"
             scale="0.2 0.5 1"
             transparent="true"
             material="shader: flat"
@@ -326,7 +337,7 @@ export function App() {
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
-            position="0.4 1.06 0.01"
+            position="0.4 1.10 0.01"
             scale="0.2 0.19 1"
             transparent="true"
             material="shader: flat"
@@ -337,6 +348,7 @@ export function App() {
         {showCharacteristics && <ImageGallery
           id='gallery-1'
           images={content.images.map(image => `#${image.id}`)}
+          audios={content.audios.map(audio => `${audio.src}`)}
           position={`0 0 ${DEFAULT_DISTANCE_FROM_USER}`}
           rotation="0 180 0"
           closeFunction={() => setShowCharacteristics(false)}
@@ -404,7 +416,7 @@ export function App() {
           rotation="0 -45 0"
           scale="0.7 0.15 0.7"
           material="shader: flat"
-          animation="property: position; to: 1.2 0 -2; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
+          animation="property: position; to: -1.2 -1 -2; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
         ></a-plane>
         <a-plane
           src="#ambient3"
