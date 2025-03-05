@@ -44,7 +44,7 @@ export function App() {
 
         {/* Load assets */}
         <a-assets>
-          <img id="panorama" src="panorama.webp" />
+          <img id="panorama" src="panorama4k.png" />
           {content.videos.map(video => <video key={video.id} id={video.id} src={video.src} muted={video.muted} autoPlay={video.autoPlay} loop={false}></video>)}
           {content.images.map(image => <img key={image.id} id={image.id} src={image.src} />)}
           {content.panelists.map(panelist => <img key={panelist.id} id={panelist.id} src={panelist.src} />)}
@@ -65,13 +65,14 @@ export function App() {
           <img id="characteristics-2" src="art_fifco-20.png" />
           <img id="characteristics-3" src="art_fifco-21.png" />
           <img id="characteristics-4" src="art_fifco-22.png" />
-          <img id="ambient1" src="ambient_element1.png" />
-          <img id="ambient2" src="ambient_element3.png" />
-          <img id="ambient3" src="ambient_element2.png" />
-          <img id="agil" src="art_fifco-55.png" />
-          <img id="simple" src="art_fifco-56.png" />
-          <img id="impacto" src="art_fifco-57.png" />
-          <img id="evolucion" src="art_fifco-58.png" />
+          <img id="ambient1" src="palabras_flotantes-32.png" />
+          <img id="ambient2" src="palabras_flotantes-33.png" />
+          <img id="ambient3" src="palabras_flotantes-34.png" />
+          <img id="agil" src="palabras_flotantes-35.png" />
+          <img id="simple" src="palabras_flotantes-36.png" />
+          <img id="impacto" src="palabras_flotantes-37.png" />
+          <img id="evolucion" src="palabras_flotantes-38.png" />
+          <img id="evolucionshell" src="palabras_flotantes-39.png" />
           <img id="next" src="next.png" />
           <img id="prev" src="prev.png" />
           <img id="close" src="close.png" />
@@ -84,7 +85,7 @@ export function App() {
         <a-sky src="#panorama"></a-sky>
 
 
-        {/* {started && <a-plane
+        {started && <a-plane
           class="clickable"
           src="#date"
           position={`0.04 -0.2 -${DEFAULT_DISTANCE_FROM_USER}`}
@@ -156,7 +157,7 @@ export function App() {
             scale="0.6 0.6 0.6"
             gltf-material-fix="color: #FFF;"
           ></a-entity>
-        </a-entity>} */}
+        </a-entity>}
 
         <a-plane
           class="clickable"
@@ -179,7 +180,7 @@ export function App() {
         ></a-plane>
 
 
-        {/* {!showPanelist && <a-entity
+        {!showPanelist && <a-entity
           position={`-${DEFAULT_DISTANCE_FROM_USER + 0.1} 0.75 0`}
           rotation="0 90 0"
           scale="1 0.75 1"
@@ -224,11 +225,11 @@ export function App() {
           position={`-${DEFAULT_DISTANCE_FROM_USER} 0 0`}
           rotation="0 90 0"
           scale="1 1 1"
-          closeFunction={() => setShowPanelists(false)} />} */}
+          closeFunction={() => setShowPanelists(false)} />}
 
         {/* Video Principal */}
 
-        {/* <VideoGallery
+        <VideoGallery
           videos={[{ src: "#video", autoplay: false }]}
           titleSrc="#video-titulo"
           position={`${DEFAULT_DISTANCE_FROM_USER} 0 0`}
@@ -339,10 +340,10 @@ export function App() {
           position={`0 0 ${DEFAULT_DISTANCE_FROM_USER}`}
           rotation="0 180 0"
           closeFunction={() => setShowCharacteristics(false)}
-        />} */}
+        />}
 
         {/* Ambient Elements */}
-        {/* <a-plane
+        <a-plane
           src="#ambient1"
           transparent="true"
           position="0.5 1 2"
@@ -389,6 +390,15 @@ export function App() {
         ></a-plane>
         <a-plane
           src="#evolucion"
+          transparent="true"
+          position="2 -1 -1"
+          rotation="0 -45 0"
+          scale="0.7 0.15 0.7"
+          material="shader: flat"
+          animation="property: position; to: 1.2 0 -2; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
+        ></a-plane>
+         <a-plane
+          src="#evolucionshell"
           transparent="true"
           position="2 -1 -1"
           rotation="0 -45 0"
@@ -458,7 +468,7 @@ export function App() {
           scale="0.4 0.4 0.4"
           material="shader: flat"
           animation="property: position; to: -3 -1 -2; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
-        ></a-plane> */}
+        ></a-plane>
       </a-scene>
     </>
   );
