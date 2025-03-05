@@ -46,7 +46,7 @@ const ImageGallery = ({ images, audios, position, rotation, closeFunction }) => 
                   key={index}
                   position={`${index * 0.1 - ((images.length - 1) * 0.1) / 2} 0 0`}
                   radius="0.02"
-                  color={index === currentIndex ? '#2D387F' : '#9BD7E1'}
+                  color={index === currentIndex ? '#FFD200' : '#EC1C24' }
                 ></a-circle>
               ))}
             </a-entity>

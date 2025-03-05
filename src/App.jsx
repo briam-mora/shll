@@ -39,7 +39,7 @@ export function App() {
 
   return (
     <>
-      <a-scene loading-screen="dotsColor: #9BD7E1; backgroundColor: #2D387F">
+      <a-scene loading-screen="dotsColor: #FFD200; backgroundColor: #EC1C24">
         <a-camera look-controls="reverseMouseDrag: true" wasd-controls-enabled="false" position="0 0 0"></a-camera>
         <a-entity id="raycaster" raycaster="objects: .clickable" cursor="rayOrigin: mouse"></a-entity>
 
@@ -439,7 +439,7 @@ export function App() {
           transparent="true"
           position="2 -1.2 -0.5"
           rotation="0 -90 0"
-          scale="0.7 0.15 0.7"
+          scale="0.7 0.7 0.7"
           material="shader: flat"
           animation="property: position; to: 2 -1.2 1; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
         ></a-plane>
@@ -466,7 +466,7 @@ export function App() {
           transparent="true"
           position="2 -1.5 2"
           rotation="0 180 0"
-          scale="1 0.2 1"
+          scale="0.588 0.2 0.588"
           material="shader: flat"
           animation="property: position; to: 0 -1 2; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
         ></a-plane>

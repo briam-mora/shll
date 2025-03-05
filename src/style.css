@@ -10,19 +10,19 @@ body,
 }
 
 .a-dialog-allow-button {
-    background-color: #9BD7E1;
+    background-color: #FFD200;
 }
 
 .a-dialog-deny-button {
-    background-color: #2D387F;
+    background-color: #EC1C24;
 }
 
 .a-dialog-ok-button {
-    background-color: #9BD7E1;
+    background-color: #FFD200;
 }
 
 .a-loading-screen {
-    background: #2D387F; /* Background color */
+    background: #FFD200; /* Background color */
     color: #ffffff; /* Text color */
   }
   .a-loading-screen .spinner {
