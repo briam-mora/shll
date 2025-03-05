@@ -142,14 +142,12 @@ export function App() {
             position="0 0 0"
             rotation="90 0 0"
             scale="0.5 0.5 0.5"
-            gltf-material-fix="color: #FFF;"
           ></a-entity>
           <a-entity
             gltf-model="Shell-Logo.glb"
             position="0 0.6 0"
             rotation="90 0 0"
             scale="0.2 0.2 0.2"
-            gltf-material-fix="color: #FFF;"
           ></a-entity>
         </a-entity>}
 
@@ -186,7 +184,7 @@ export function App() {
             position="0 -1.1 0"
             scale="0.25 0.25 0.25"
             gltf-material-fix="color: #FFF;"
-            animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true; autoplay: true"
+            animation="property: rotation; to: 0 -360 0; dur: 15000; easing: linear; loop: true; autoplay: true"
           ></a-entity>
         </a-entity>
 
