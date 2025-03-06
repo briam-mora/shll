@@ -64,8 +64,8 @@ export function App() {
           <img id="characteristics-button" src="art_shell-18.png" />
           <img id="characteristics-arrow" src="art_shell-23.png" />
           <img id="characteristics-1" src="art_shell-19.png" />
-          <img id="characteristics-2" src="art_shell-20.png" />
-          <img id="characteristics-3" src="art_shell-21.png" />
+          <img id="characteristics-2" src="shell_AR-41.png" />
+          <img id="characteristics-3" src="shell_AR-40.png" />
           <img id="characteristics-4" src="art_shell-22.png" />
           <img id="ambient1" src="palabras_flotantes-COLOR-32.png" />
           <img id="ambient2" src="palabras_flotantes-COLOR-33.png" />
@@ -139,16 +139,16 @@ export function App() {
           scale="1 1 1"
         >
           <a-entity
-            gltf-model="imags_Shell_trans.glb"
+            gltf-model="02-vpower.glb"
             position="0 0 0"
             rotation="90 0 0"
-            scale="0.5 0.5 0.5"
+            scale="0.4 0.4 0.4"
           ></a-entity>
           <a-entity
-            gltf-model="Shell-Logo.glb"
-            position="0 0.6 0"
+            gltf-model="01-logo.glb"
+            position="0 0.5 0"
             rotation="90 0 0"
-            scale="0.2 0.2 0.2"
+            scale="0.1 0.1 0.1"
           ></a-entity>
         </a-entity>}
 
@@ -246,18 +246,24 @@ export function App() {
           rotation="0 -90 0"
           scale="1 1 1" />
 
-        {!showCharacteristics && <a-plane
+        {!showCharacteristics && <a-entity
           class="clickable"
-          src="#characteristics-button"
+
           position={`0 -0.25 ${DEFAULT_DISTANCE_FROM_USER + 0.1}`}
           rotation="0 180 0"
+          scale="1 0.7 1"
+          onClick={openCharacteristics}
+          scale-animator="duration: 500; easing: easeInOutCubic"
+        >
+          <a-plane
+          class="clickable"
+          src="#characteristics-button"
+          position="0 0.1 0"
           scale="1 0.7 1"
           transparent="true"
           material="shader: flat"
           onClick={openCharacteristics}
-          scale-animator="duration: 500; easing: easeInOutCubic"
-        >
-          
+        ></a-plane>
           <a-plane
             src="#characteristics-title"
             class="clickable"
@@ -281,7 +287,7 @@ export function App() {
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
             position="-0.4 1.10 0.01"
-            scale="0.2 0.19 1"
+            scale="0.2 0.22 1"
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
@@ -309,7 +315,7 @@ export function App() {
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
             position="-0.1325 1.10 0.01"
-            scale="0.2 0.19 1"
+            scale="0.2 0.22 1"
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
@@ -328,7 +334,7 @@ export function App() {
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
             position="0.1325 1.10 0.01"
-            scale="0.2 0.19 1"
+            scale="0.2 0.22 1"
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
@@ -347,12 +353,12 @@ export function App() {
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
             position="0.4 1.10 0.01"
-            scale="0.2 0.19 1"
+            scale="0.2 0.22 1"
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
           ></a-plane>
-        </a-plane>}
+        </a-entity>}
 
         {showCharacteristics && <ImageGallery
           id='gallery-1'
