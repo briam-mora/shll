@@ -267,8 +267,8 @@ export function App() {
           <a-plane
             src="#characteristics-title"
             class="clickable"
-            position="0 1.35 0"
-            scale="1.3 0.28 0.3"
+            position="-0.01 1.2 0"
+            scale="1.1 0.28 0.3"
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
