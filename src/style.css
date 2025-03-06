@@ -11,14 +11,17 @@ body,
 
 .a-dialog-allow-button {
     background-color: #FFD200 !important;
+    color: #ffffff !important;
 }
 
 .a-dialog-deny-button {
     background-color: #EC1C24 !important;
+    color: #ffffff !important;
 }
 
 .a-dialog-ok-button {
     background-color: #FFD200 !important;
+    color: #ffffff !important;
 }
 
 .a-loading-screen {
