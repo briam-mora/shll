@@ -282,7 +282,7 @@ export function App() {
             material="shader: flat"
             onClick={openCharacteristics}
           ></a-plane>
-          <a-plane
+          {/* <a-plane
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
@@ -291,7 +291,7 @@ export function App() {
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
-          ></a-plane>
+          ></a-plane> */}
           {/*<a-plane
             src="#characteristics-background"
             class="clickable"
@@ -310,7 +310,7 @@ export function App() {
             material="shader: flat"
             onClick={openCharacteristics}
           ></a-plane>
-          <a-plane
+          {/* <a-plane
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
@@ -319,7 +319,7 @@ export function App() {
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
-          ></a-plane>
+          ></a-plane> */}
           <a-plane
             src="#characteristics-3"
             class="clickable"
@@ -329,7 +329,7 @@ export function App() {
             material="shader: flat"
             onClick={openCharacteristics}
           ></a-plane>
-          <a-plane
+          {/* <a-plane
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
@@ -338,7 +338,7 @@ export function App() {
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
-          ></a-plane>
+          ></a-plane> */}
           <a-plane
             src="#characteristics-4"
             class="clickable"
@@ -348,7 +348,7 @@ export function App() {
             material="shader: flat"
             onClick={openCharacteristics}
           ></a-plane>
-          <a-plane
+          {/* <a-plane
             src="#characteristics-arrow"
             class="clickable"
             hover-animator="duration: 2000; easing: easeInOutQuad;"
@@ -357,7 +357,7 @@ export function App() {
             transparent="true"
             material="shader: flat"
             onClick={openCharacteristics}
-          ></a-plane>
+          ></a-plane> */}
         </a-entity>}
 
         {showCharacteristics && <ImageGallery
@@ -370,7 +370,7 @@ export function App() {
         />}
 
         {/* Ambient Elements */}
-        <a-plane
+        {/* <a-plane
           src="#ambient1"
           transparent="true"
           position="0.5 1 2"
@@ -495,7 +495,7 @@ export function App() {
           scale="0.4 0.4 0.4"
           material="shader: flat"
           animation="property: position; to: -3 -1 -2; dur: 15000; easing: easeInOutQuad; loop: true; dir: alternate;"
-        ></a-plane>
+        ></a-plane> */}
       </a-scene>
     </>
   );
